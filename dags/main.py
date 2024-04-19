@@ -23,15 +23,11 @@ def pipeline():
     def terceira_atividade():
         print("Primeira atividade")
         sleep(2)
-    @task
-    def quarta_atividade():
-        print("Primeira atividade")
-        sleep(2)
+
 
     t1 = primeira_atividade()
     t2 = segunda_atividade()
     t3 = terceira_atividade()
-    t4 = quarta_atividade()
 
-    t1 >> t2 >> t3 >> t4
+    t1 >> t2 >> t3 
 pipeline()
